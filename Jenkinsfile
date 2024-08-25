@@ -8,7 +8,7 @@ pipeline {
         appVersion = "0.0.1-SNAPSHOT"
         appType = "jar"
         processName = "${appName}-${appVersion}.${appType}"
-        folderDeploy = "/datas/$/{appUser}"
+        folderDeploy = "/datas/${appUser}"
         buildScript = "mvn clean install -DskipTests=true"
     }
     stages {
