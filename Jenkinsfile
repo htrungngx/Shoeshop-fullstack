@@ -17,7 +17,7 @@ pipeline {
                 sh(script: """ whoami;pwd;ls -la """, label: "first stage")
             }
         }
-        stage('Info') {
+        stage('Build') {
             steps {
                 sh(script: """ ${buildScript} """, label: "build with maven")
             }
